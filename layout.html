@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+
+        <title>SWS - Blood Pressure</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body style="background-color:rgb(245, 239, 239)">
+        <style>
+            
+            ::placeholder {
+                color: rgb(111, 0, 255);
+                opacity: 1; /* Firefox */
+                font-size:medium;
+            }
+
+            input[type="text"] {
+                padding: 12px 20px;
+                margin: 8px0;
+                box-sizing: border-box;
+                font-size:medium;
+                width: 200px;
+            }
+        .center {
+            position: absolute;
+            /*  top: 0;
+             bottom: 0; */
+            left: 0;
+            right: 0;
+            margin: auto;  
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        .c {
+            position: absolute;
+            left: 40%;
+            height: 300px;
+            }
+
+        .d {
+            position: absolute;
+            left: 40%;
+            top: 75%;
+            }
+
+        .e {
+            position: relative;
+            left:0%;
+            top: 0px;
+            }
+    </style>
+
+        {% block y %}{% endblock %}
+
+    <div class="e centered">
+    <h3 ><br></h3>
+        <footer>
+            Copyright &#169; Alton Bowers
+        </footer>
+    <figure>
+        <img  src="static/sunwave16.bmp"
+            alt="SWS"
+            width="50" height="60">
+            <figcaption>SunWave Software</figcaption>
+    </figure>
+    </div>
+    </body>
+</html>
+
