@@ -1,24 +1,36 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SWS - Blood Pressure</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body style="background-color:rgb(245, 239, 239)">
+        <div style="text-align:center">
+            <h2>Blood Pressure Recording</h2>
 
-{% block y %}
-<h2 class="centered">Blood Pressure Recording</h2>
-
-<h4>
-<form method="post" action="/bpregister"    align="center">
-    <input type="text" name="name" placeholder="Name"  autofocus  sytle="height:12px; width:200px">
-    <br>
-    <input type="text" name="sys" placeholder="Systolic" >
-    <br> / <br>
-    <input type="text" name="dia" placeholder="Diastolic">
-    <br>
-    <input type="text" name="pul" placeholder="PULSE" style="height:12px;width:100px">
-    <br><br>
-    <input type="submit" value="Record BP">
-    <br>
-</form>
-<form class="centered" action="/bpview">
-    <button type="submit">View BP Data</button>
-</form>
- </h4>  
-{% endblock %} 
-
+            <br><br>
+             <h4>
+                <form method="post" action="/bpregister"    align="center">
+                    <input type="text" name="name" placeholder="Name"  autofocus  sytle="height:12px; width:200px">
+                    <br><br>
+                    <input type="text" name="sys" placeholder="Systolic" >
+                    <br> / <br>
+                    <input type="text" name="dia" placeholder="Diastolic">
+                    <br><br>
+                    <input type="text" name="pul" placeholder="PULSE" style="height:24px;width:200px">
+                    <br><br><br>
+                    <input type="submit" value="Record BP">
+                    <br>
+                </form>
+                <br><br>
+                <form  action="/bpview">
+                    <button type="submit">View BP Data</button>
+                </form>
+            </h4>  
+        </div>
+    </body>
+</html>
